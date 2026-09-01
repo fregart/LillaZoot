@@ -11,7 +11,7 @@ namespace LillaZoot
         // Constructor
         public Animal(string name)
         {
-            Name = name;      
+            Name = name;
         }
 
         // Abstract method
@@ -22,5 +22,31 @@ namespace LillaZoot
             Console.WriteLine($"{Name} is eating.");
         }
 
+        class Lion : Animal
+        {
+            public Lion(string name) : base(name) { }
+            public override void MakeSound()
+            {
+                Console.WriteLine($"{Name} says: Roar!");
+            }
+        }
+
+        class Elephant : Animal
+        {
+            public Elephant(string name) : base(name) { }
+            public override void MakeSound()
+            {
+                Console.WriteLine($"{Name} says: Trumpet!");
+            }
+        }
+
+        class Parrot : Animal
+        {
+            public Parrot(string name) : base(name) { }
+            public override void MakeSound()
+            {
+                Console.WriteLine($"{Name} says: Squawk!");
+            }
+        }
     }
 }
